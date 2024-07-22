@@ -24,8 +24,12 @@ function App() {
       setAlert(null);
     }, 1500);
   }
-
-  const toggleMode = () => {
+  const removeBodyClasses(){
+    document.body
+  }
+  const toggleMode = (cls) => {
+    console.log(cls);
+    document.body.classList.add('bg-'+cls)
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
